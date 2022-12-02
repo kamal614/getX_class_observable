@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rx_class_getx/controller.dart';
-import 'package:rx_class_getx/student_class.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
@@ -9,7 +8,7 @@ class Home extends StatelessWidget {
   // var stu = Student();
 
   //Making the whole class observable
-  // final stu = Student(studentName: "kamal", age: 22);
+  // final stu = Student(studentName: "kamal", age: 22).obs;
 
   //Creating the ibject of the controller class so that we can access that.
   KamalController kamalController = Get.put(KamalController());
@@ -23,12 +22,13 @@ class Home extends StatelessWidget {
             Obx(
               () {
                 return Text(
-                    "Name of student is ${kamalController.stu.studentName}");
+                    "Name of student is ${kamalController.stu.value.studentName}");
               },
             ),
             ElevatedButton(
                 onPressed: () {
-                  kamalController.convertToUpperCase();
+                  // kamalController.convertToUpperCase();
+                  kamalController.convertToUpperClass();
                 },
                 child: const Text("To UpperCase"))
           ],
