@@ -4,7 +4,11 @@ import 'package:rx_class_getx/student_class.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
+  //Only making the variable obserable
   var stu = Student();
+
+  //Making the whole class observable
+  // final stu = Student(studentName: "kamal", age: 22);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
