@@ -13,6 +13,7 @@ class KamalController extends GetxController {
   void convertToUpperClass() {
     stu.update((val) {
       val!.studentName = val.studentName.toString().toUpperCase();
+      //this is test
     });
   }
 }
